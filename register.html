@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register Member</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+<style>
+	table{
+		border: 1px solid black;
+		margin: 10px auto;
+	}
+	input{
+		width: 300px;
+	}
+</style>
+<body>
+	<a href="login.html">Đăng nhập</a>
+	<table>
+		<tr>
+			<td>Họ và Tên:</td>
+			<td><input type="text" id="txtHoTen"></td>
+		</tr>
+		
+		<tr>
+			<td>Giới tính:</td>
+			<td>
+				<select id="selGioiTinh">
+					<option value="Nam">Nam</option>
+					<option value="Nu">Nữ</option>
+				</select>
+			</td>
+		</tr>
+
+		<tr>
+			<td>Năm sinh</td>
+			<td><input id="txtNamSinh" value="" ></td>
+		</tr>
+		<tr>
+			<td>Địa chỉ</td>
+			<td><input type="text" id="txtDiaChi" value="" ></td>
+		</tr>
+		<tr>
+			<td>Sở thích</td>
+			<td><input type="text" id="txtSoThich" value="" ></td>
+		</tr>
+		<tr>
+			<td>Tên tài khoản</td>
+			<td><input type="text" id="txtTenTaiKhoan" value="" ></td>
+		</tr>
+		<tr>
+			<td>Mật khẩu</td>
+			<td><input type="password" id="txtMatKhau" value="" ></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" value="Thêm" onclick="addMember()">
+			</td>
+		</tr>
+	</table>
+	<button type="button" onclick="clearAll()">Clear All Data</button>
+	<table id="tblMember" border="1">
+		<thead>
+			<th>STT</th>
+			<th>Họ và Tên</th>
+			<th>Giới tính</th>
+			<th>Năm sinh</th>
+			<th>Địa chỉ</th>
+			<th>Sở thích</th>
+			<th>Tên tài khoản</th>
+			<th>Mật khẩu</th>
+		</thead>
+	</table>
+	
+
+
+	<script type="text/javascript" src="script.js">		
+	</script>
+</body>
+</html>

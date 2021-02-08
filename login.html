@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <a href="register.html">Quay lại trang đăng ký</a>
+    <div class="login" >
+        <form action="" style="margin: 0 auto; width: 500px;">
+            <input type="text" placeholder="username" id="username"><br>
+            <input type="password" placeholder="password" id="password"><br>
+            <input type="button" value="Login" onclick="check()"><br>
+        </form>
+    </div>
+
+    <script>
+        function check()
+        {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var listMember = JSON.parse(localStorage.getItem('listMember'));
+            if (listMember != null)
+            {
+                for (var i = 0; i < listMember.length; i++)
+                {
+                    if (listMember[i].username == username && listMember[i].password == password)
+                    {
+                        var x = confirm("Đăng nhập thành công, bạn muốn quay lại trang đăng ký ?");
+                        if (x)
+                            window.location = 'register.html';
+                        return;
+                    }
+                }
+                var x = alert("Đăng nhập thất bại");
+                       
+            }
+        }
+    </script>
+</body>
+</html>
